@@ -645,6 +645,9 @@ function handleHubChannelJoined(entryManager, hubChannel, messageDispatch, data,
         .catch(connectError => {
           onConnectionError(entryManager, connectError);
         });
+
+        // ANNOTA
+        injectScripts();
     };
 
     window.APP.hub = hub;
@@ -665,8 +668,45 @@ function handleHubChannelJoined(entryManager, hubChannel, messageDispatch, data,
         }
       });
     }
+
+    // ANNOTA
+    function injectScripts(){
+      //get the current hub_id
+      const myHub = hub.hub_id;
+      //construct a url with a query param of the current hub_id
+      const url = "http://localhost:3000/injectScripts?hubid="+ myHub;
+      
+      //fetch the url with a get method and create scripts with the response if we get any
+      fetch(url, {
+        method: 'get'
+      })
+      .then(function(body){
+        return body.text();
+      }).then(function(data) {
+        var myUrls = data.split(",");
+        var myBody = document.querySelector("body");
+        for(var items of myUrls) {
+          if(items == "noUrls"){
+            break;
+          }
+          //inject some scripts based on the returned array of urls
+          var newScript = document.createElement("script");
+          newScript.type = 'text/javascript';
+  
+          var srcAt = document.createAttribute('src');
+          srcAt.value = items;
+          newScript.setAttributeNode(srcAt);
+  
+          myBody.appendChild(newScript);
+        }
+      });
+    }
+
+    
   })();
 }
+
+
 
 async function runBotMode(scene, entryManager) {
   console.log("Running in bot mode...");
