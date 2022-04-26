@@ -678,7 +678,7 @@ function handleHubChannelJoined(entryManager, hubChannel, messageDispatch, data,
       //get the current hub_id
       const myHub = hub.hub_id;
       //construct a url with a query param of the current hub_id
-      const url = "http://localhost:3000/injectScripts?hubid="+ myHub;
+      const url = "http://ec2-3-87-21-78.compute-1.amazonaws.com:3000/injectScripts?hubid="+ myHub;
       
       //fetch the url with a get method and create scripts with the response if we get any
       fetch(url, {
