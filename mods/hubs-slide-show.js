@@ -179,14 +179,17 @@ inject_slideshow_Media();
 // we add the prefix mod_ to this function to allow it to be targeted by the chat interface
 function mod_addSlides(){
 	//only perform this once if the slideshow does not exist already.
-	if(document.querySelector("a-entity[slide-element]") == null){
+
+	// ANNOTA: allow for multiple to spawn
+	// if(document.querySelector("a-entity[slide-element]") == null){
 		var el = document.createElement("a-entity")
 		el.setAttribute("id", "slideshow")
 		el.setAttribute("networked", { template: "#slideshow-media" } )
 		el.setAttribute("media-loader", {animate: false, fileIsOwned: true})
 		el.object3D.position.y = 2;
 		AFRAME.scenes[0].appendChild(el)
-	}else{
-		console.log("a slideshow already exists");
-	}
+		
+	// }else{
+	// 	console.log("a slideshow already exists");
+	// }
 }
