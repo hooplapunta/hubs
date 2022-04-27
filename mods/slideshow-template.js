@@ -26,7 +26,7 @@
 		// masks are used to limit what objects can collide with.  See the body-helper
 		// component for more information
 		let tempAtt = document.createAttribute("body-helper");
-		tempAtt.value = "type: static; mass: 1; collisionFilterGroup: 1; collisionFilterMask: 15;";
+		tempAtt.value = "type: dynamic; mass: 1; collisionFilterGroup: 1; collisionFilterMask: 15;";
 		newEntity.setAttributeNode(tempAtt);
 		
 		//owned-object-limiter
