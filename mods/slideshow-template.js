@@ -40,6 +40,7 @@
 			reduceAngularFloat: true,
 			releaseGravity: -1
 		});
+		newEntity.setAttribute("offset-relative-to", { target: "#avatar-pov-node", offset: { x: 0, y: 0, z: -1 } });
 		
 		//owned-object-limiter
 		tempAtt = document.createAttribute("owned-object-limiter");
