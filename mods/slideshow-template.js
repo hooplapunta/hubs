@@ -33,11 +33,12 @@
 		// newEntity.setAttribute("shape-helper", { type: "box" });
 		newEntity.setAttribute("set-unowned-body-kinematic", "");
 		newEntity.setAttribute("floaty-object", { // Manages the gravity of an object so that it doesn't fall straight to the floor
-		    modifyGravityOnRelease: true,
+		    // modifyGravityOnRelease: true,
 	    	autoLockOnLoad: true,
 			autoLockOnRelease: true,
-			gravitySpeedLimit: 0,
-			reduceAngularFloat: true
+			// gravitySpeedLimit: 0,
+			reduceAngularFloat: true,
+			releaseGravity: -1
 		});
 		
 		//owned-object-limiter
