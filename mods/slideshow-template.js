@@ -26,14 +26,14 @@
 		// masks are used to limit what objects can collide with.  See the body-helper
 		// component for more information
 		let tempAtt = document.createAttribute("body-helper");
-		tempAtt.value = "type: kinematic; mass: 1; collisionFilterGroup: 1; collisionFilterMask: 31;";
+		tempAtt.value = "type: kinematic; mass: 0; collisionFilterGroup: 1; collisionFilterMask: 31;";
 		newEntity.setAttributeNode(tempAtt);
 		
 		// ANNOTA: missing attributes
 		// newEntity.setAttribute("shape-helper", { type: "box" });
 		newEntity.setAttribute("set-unowned-body-kinematic", "");
 		newEntity.setAttribute("floaty-object", { // Manages the gravity of an object so that it doesn't fall straight to the floor
-		    modifyGravityOnRelease: false,
+		    modifyGravityOnRelease: true,
 	    	autoLockOnLoad: true,
 			autoLockOnRelease: true,
 			gravitySpeedLimit: 0,
