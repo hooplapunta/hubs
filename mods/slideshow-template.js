@@ -26,22 +26,16 @@
 		// masks are used to limit what objects can collide with.  See the body-helper
 		// component for more information
 		let tempAtt = document.createAttribute("body-helper");
-		tempAtt.value = "type: kinematic; mass: 1; collisionFilterGroup: 1; collisionFilterMask: 31;";
+		tempAtt.value = "type: kinematic; mass: 1; collisionFilterGroup: 1; collisionFilterMask: 15;";
 		newEntity.setAttributeNode(tempAtt);
-		
-		// ANNOTA: missing attributes
-		// newEntity.setAttribute("shape-helper", { type: "box" });
+
+		// ANNOTA: changes here to allow slideshow to move around
 		newEntity.setAttribute("set-unowned-body-kinematic", "");
-		newEntity.setAttribute("floaty-object", { // Manages the gravity of an object so that it doesn't fall straight to the floor
-		    modifyGravityOnRelease: true,
-	    	autoLockOnLoad: true,
-			autoLockOnRelease: true,
-			// gravitySpeedLimit: 0,
-			reduceAngularFloat: true,
-			releaseGravity: -1
-		});
-		newEntity.setAttribute("offset-relative-to", { target: "#avatar-pov-node", offset: { x: 0, y: 0, z: -1 } });
-		
+
+		tempAtt = document.createAttribute("floaty-object");
+		tempAtt.value = "modifyGravityOnRelease: true; autoLockOnLoad: true; reduceAngularFloat: true; releaseGravity: -1; gravitySpeedLimit: 5;";
+		newEntity.setAttributeNode(tempAtt);
+				
 		//owned-object-limiter
 		tempAtt = document.createAttribute("owned-object-limiter");
 		tempAtt.value = "counter: #media-counter";
@@ -55,7 +49,7 @@
 		// qualities of the entity.  We can reuse tempAtt to set all it's values
 		tempAtt = document.createAttribute("tags")
 		// set it to be a hand collision target, holdable, give it a hand constraint, a remote constraint, and set to be inspectable with a right click.
-		tempAtt.value = "isHandCollisionTarget: true; isHoldable: true; offersHandConstraint: true; offersRemoteConstraint: true; inspectable: true; singleActionButton:true; isStatic: false; togglesHoveredActionSet: true"
+		tempAtt.value = "isHandCollisionTarget: true; isHoldable: true; offersHandConstraint: true; offersRemoteConstraint: true; inspectable: true; singleActionButton:true; isStatic: true; togglesHoveredActionSet: true"
 		newEntity.setAttributeNode(tempAtt);
 		
 		//isStatic: true; togglesHoveredActionSet: true; inspectable: true;
