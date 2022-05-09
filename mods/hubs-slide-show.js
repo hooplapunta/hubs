@@ -105,10 +105,10 @@
 		    menuEntity.setAttribute("visible", "false");
 
 		    // ANNOTA: a repositioning of the buttons, need to reinsert the snap button here
-		    menuEntity.innerHTML = "<a-entity class='prev-button' position='-0.55 0 0'><a-entity is-remote-hover-target tags='singleActionButton:true; isHoverMenuChild: true;' mixin='rounded-text-button' slice9='width: 0.15' material='color: white; opacity: 0.1; transparent: true'></a-entity></a-entity>" +
+		    menuEntity.innerHTML = "<a-entity class='prev-button' position='-0.50 0 0'><a-entity is-remote-hover-target tags='singleActionButton:true; isHoverMenuChild: true;' mixin='rounded-text-button' slice9='width: 0.15' material='color: white; opacity: 0.1; transparent: true'></a-entity></a-entity>" +
 		        // "<a-entity class='page-label' position='0 -0.4 0' text='value:.; width:2; align:center;' text-raycast-hack></a-entity>" +
 				// "<a-entity class='snap-button' position='0 0.175 0' scale='0.75 0.75 1'> <a-entity is-remote-hover-target tags='singleActionButton:true; isHoverMenuChild: true;' mixin='rounded-text-button' slice9='width: 0.2'> <a-entity sprite icon-button='image: snap-page.png; hoverImage: snap-page.png;' scale='0.115 0.115 0.115' position='0 0 0.001' ></a-entity> </a-entity> </a-entity>" +
-		        "<a-entity class='next-button' position='0.55 0 0'><a-entity is-remote-hover-target tags='singleActionButton:true; isHoverMenuChild: true;' mixin='rounded-text-button' slice9='width: 0.15' material='color: white; opacity: 0.1; transparent: true'></a-entity></a-entity>";
+		        "<a-entity class='next-button' position='0.50 0 0'><a-entity is-remote-hover-target tags='singleActionButton:true; isHoverMenuChild: true;' mixin='rounded-text-button' slice9='width: 0.15' material='color: white; opacity: 0.1; transparent: true'></a-entity></a-entity>";
 
 		    pageHoverTemplate.content.appendChild(menuEntity);
 
