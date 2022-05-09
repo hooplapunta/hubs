@@ -1,6 +1,6 @@
 var slideconfig = {};
 
-slideconfig.panels = [
+slideconfig.slides = [
     "https://hooplapunta.github.io/hubs/mods/panels/CalloutPanel.png",
     "https://hooplapunta.github.io/hubs/mods/panels/VoiceNotePanel1.png",
     "https://hooplapunta.github.io/hubs/mods/panels/VoiceNotePanel2.png",
