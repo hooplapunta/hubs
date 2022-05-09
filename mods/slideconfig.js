@@ -1,14 +1,11 @@
 var slideconfig = {};
 
-slideconfig.slides = [
-"https://hooplapunta.github.io/hubs/mods/slides/Annotation%201.png",
-"https://hooplapunta.github.io/hubs/mods/slides/Annotation%202.png",
-"https://hooplapunta.github.io/hubs/mods/slides/Annotation%203.png",
-"https://hooplapunta.github.io/hubs/mods/slides/Viewpoint%201.png",
-"https://hooplapunta.github.io/hubs/mods/slides/Viewpoint%202.png",
-"https://hooplapunta.github.io/hubs/mods/slides/Navigation%200.png",
-"https://hooplapunta.github.io/hubs/mods/slides/Navigation%201.png",
-"https://hooplapunta.github.io/hubs/mods/slides/Navigation%202.png",
-"https://hooplapunta.github.io/hubs/mods/slides/Navigation%203.png",
-"https://hooplapunta.github.io/hubs/mods/slides/Navigation%204.png",
+slideconfig.panels = [
+    "https://hooplapunta.github.io/hubs/mods/panels/CalloutPanel.png",
+    "https://hooplapunta.github.io/hubs/mods/panels/VoiceNotePanel1.png",
+    "https://hooplapunta.github.io/hubs/mods/panels/VoiceNotePanel2.png",
+    "https://hooplapunta.github.io/hubs/mods/panels/ViewpointPanel1.png",
+    "https://hooplapunta.github.io/hubs/mods/panels/ViewpointPanel2.png",
+    "https://hooplapunta.github.io/hubs/mods/panels/NavigationPanel1.png",
+    "https://hooplapunta.github.io/hubs/mods/panels/NavigationPanel2.png",
 ];
